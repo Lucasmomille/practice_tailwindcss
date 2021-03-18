@@ -4,22 +4,26 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    colors: {
-      brown: {
-        btn: '#412314',
-      },
-      orange: {
-        bg: '#F8E7D4',
-      },
-    },
-    borderRadius: {
-      section: '400px'
-    },
-    minHeight: {
-      header: '10vh',
-      section: '90vh'
+    height: {
+      header: '20vh',
+      section: '80vh',
+      section95: '95vh'
     },
     extend: {
+      fontFamily: {
+        'comfortaa': ['Comfortaa', 'Helvetica', 'Arial', 'sans-serif']
+      },
+      colors: {
+        brown: {
+          btn: '#412314',
+        },
+        orange: {
+          bg: '#F8E7D4',
+        },
+      },
+      borderRadius: {
+        section: '400px'
+      },
     }
   },
   variants: {
