@@ -12,12 +12,14 @@ module.exports = {
         bg: '#F8E7D4',
       },
     },
+    borderRadius: {
+      section: '400px'
+    },
+    minHeight: {
+      header: '10vh',
+      section: '90vh'
+    },
     extend: {
-      colors: {
-        brown: {
-          btn: '#412314',
-        },
-      },
     }
   },
   variants: {
