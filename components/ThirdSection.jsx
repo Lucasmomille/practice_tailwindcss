@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ThirdSection(){
     return (
-    <section className="h-section95 rounded-tl-section items-center bg-orange-bg pt-12">
+    <section className="min-h-section95 rounded-tl-section items-center bg-orange-bg pt-12">
         <h2 className="text-center text-2xl">A propos de <br/> <span className="font-bold text-3xl">nous</span> </h2>
         <article className="flex flex-row justify-between mx-20 mt-16">
           <div className="flex flex-col w-1/3 transform scale-95 space-y-4">

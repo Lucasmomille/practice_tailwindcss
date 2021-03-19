@@ -11,7 +11,7 @@ export default function Layout({ children, page }) {
                 <link rel="preconnect" href="https://fonts.gstatic.com"/>
                 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet"/> 
             </Head>
-            <header className="px-10 flex bg-orange-bg pt-6 h-header">
+            <header className="px-10 flex bg-orange-bg pt-6 min-h-header">
                 <div className="mr-4">
                 <a href="https://lewys.io/">
                     <Image src="/logo_lewys_png.png" alt="logo Lewys" width="70" height="59"></Image>
@@ -25,7 +25,7 @@ export default function Layout({ children, page }) {
             <main>
                 {children}
             </main>
-            <footer className="h-header flex flex-col items-center">
+            <footer className="min-h-header flex flex-col items-center">
                 <div className="flex flex-row">
                     <div className="mr-4">
                         <a href="https://lewys.io/">

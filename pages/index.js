@@ -1,13 +1,14 @@
 
-import { useForm } from "react-hook-form";
+
 import Layout from '../components/Layout'
 import Image from 'next/image'
 import ThirdSection from '../components/ThirdSection'
+import Form from '../components/Form'
 
 export default function Home() {
   return (
     <Layout page="Lewys x Swiblu">
-      <section className="h-section bg-orange-bg px-20 rounded-br-section relative z-30">
+      <section className="min-h-section bg-orange-bg px-20 rounded-br-section relative z-30">
         <h1 className="text-5xl font-bold uppercase pt-10">Vous voulez créer <br/> votre boutique en ligne&nbsp;?</h1>
         <p className="my-6 w-3/6">On est spécialiste là dedans, ça ne vous coûtera pas un bras et en plus on est sympa&nbsp;!</p>
         <div className="flex flex-row w-1/3 justify-between font-bold">
@@ -21,7 +22,7 @@ export default function Home() {
           <img src="/section_1_2x.png" alt="illustration écran" className="w-full"/>
         </div> */}
       </section>
-      <section className="h-section95 text-center flex flex-col" id="section2">
+      <section className="min-h-section95 text-center flex flex-col" id="section2">
         <h2 className="text-5xl font-bold mb-12 pt-20">Pourquoi nous faire confiance&nbsp;?</h2>
         <article className="flex md:flex-row flex-col items-center justify-between mx-6 mt-28">
           <figure className="flex flex-col items-center w-1/3 transform scale-95">
@@ -55,18 +56,14 @@ export default function Home() {
       </section>
       <ThirdSection></ThirdSection>
       
-      <section className="h-section flex flex-col items-center justify-center">
+      <section className="min-h-section flex flex-col items-center justify-center">
         <h2 className="text-3xl font-bold">
           Commencez à vendre en ligne !
         </h2>
         <div>
           <Image src="/section_1_2x.png" alt="illustration écran" width="562" height="340"></Image>
         </div>
-        <form action="submit">
-          <input type="text"/>
-          <input type="text"/>
-          <button className="rounded-full w-20 h-20 bg-brown-btn p-6 text-white font-bold text-3xl">&rsaquo;</button>
-        </form>
+        <Form></Form>
 
       </section>
       
