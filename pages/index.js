@@ -1,6 +1,8 @@
 
+import { useForm } from "react-hook-form";
 import Layout from '../components/Layout'
 import Image from 'next/image'
+import ThirdSection from '../components/ThirdSection'
 
 export default function Home() {
   return (
@@ -51,11 +53,20 @@ export default function Home() {
           </figure>
         </article>
       </section>
-      <section className="h-section95 rounded-tl-section items-center bg-orange-bg pt-12">
-        <h2 className="text-center text-2xl">A propos de <br/> <span className="font-bold text-3xl">nous</span> </h2>
-        <article className="flex flex-row justify-between"></article>
-      </section>
-      <section className="h-section">
+      <ThirdSection></ThirdSection>
+      
+      <section className="h-section flex flex-col items-center justify-center">
+        <h2 className="text-3xl font-bold">
+          Commencez à vendre en ligne !
+        </h2>
+        <div>
+          <Image src="/section_1_2x.png" alt="illustration écran" width="562" height="340"></Image>
+        </div>
+        <form action="submit">
+          <input type="text"/>
+          <input type="text"/>
+          <button className="rounded-full w-20 h-20 bg-brown-btn p-6 text-white font-bold text-3xl">&rsaquo;</button>
+        </form>
 
       </section>
       
