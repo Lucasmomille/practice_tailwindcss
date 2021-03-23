@@ -9,14 +9,14 @@ import Form from '../components/Form'
 export default function Home() {
   return (
     <Layout page="Lewys x Swiblu">
-      <section className="min-h-section bg-orange-bg px-20 rounded-br-section relative z-30">
-        <h1 className="text-5xl font-bold uppercase pt-10">Vous voulez créer <br/> votre boutique en ligne&nbsp;?</h1>
-        <p className="my-6 w-3/6">On est spécialiste là dedans, ça ne vous coûtera pas un bras et en plus on est sympa&nbsp;!</p>
-        <div className="flex flex-row w-1/3 justify-between font-bold">
-          <a href="#section2" className="bg-brown-btn py-2 px-8 text-white rounded-xl"> Ça m'interesse !</a>
-          <a href="" className="text-brown-btn py-2 px-8">Découvrir les avantages &rsaquo;</a>
+      <section className="md:min-h-section bg-orange-bg md:px-20 px-4 text-center md:text-left md:rounded-br-section relative z-30 w-full">
+        <h1 className="md:text-5xl text-lg font-bold uppercase pt-10">Vous voulez créer <br/> votre boutique en ligne&nbsp;?</h1>
+        <p className="my-6 md:w-3/6 w-5/6 inline-block">On est spécialiste là dedans, ça ne vous coûtera pas un bras et en plus on est sympa&nbsp;!</p>
+        <div className="flex flex-col mx-auto md:flex-row w-5/6 justify-between font-bold space-y-6 md:space-y-0 mt-12 md:mt-0">
+          <a href="#section4" className="bg-brown-btn py-2 px-8 text-white rounded-xl"> Ça m'interesse !</a>
+          <a href="#section2" className="text-brown-btn py-2 px-8">Découvrir les avantages &rsaquo;</a>
         </div>
-        <div className="absolute top-8 right-36">
+        <div className="md:absolute md:top-8 md:right-36 p-6 md:p-0">
           <Image src="/section_1_2x.png" alt="illustration écran" width="562" height="340"></Image>
         </div>
         {/* <div className="absolute top-6 right-56 w-1/3">
@@ -26,12 +26,12 @@ export default function Home() {
       <SecondSection></SecondSection>
       <ThirdSection></ThirdSection>
       
-      <section className="min-h-section flex flex-col items-center justify-center">
-        <h2 className="text-3xl font-bold">
+      <section className="md:min-h-section w-full flex flex-col items-center justify-center" id="section4">
+        <h2 className="md:text-4xl text-xl font-bold my-12">
           Commencez à vendre en ligne !
         </h2>
-        <div>
-          <Image src="/graphic_2x.png" alt="illustration écran" width="458" height="430"></Image>
+        <div className="mb-16">
+          <Image src="/graphic_2x.png" alt="illustration écran" width="308" height="280"></Image>
         </div>
         <Form></Form>
 

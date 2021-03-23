@@ -11,7 +11,7 @@ export default function Layout({ children, page }) {
                 <link rel="preconnect" href="https://fonts.gstatic.com"/>
                 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet"/> 
             </Head>
-            <header className="px-10 flex bg-orange-bg pt-6 min-h-header">
+            <header className="px-10 flex bg-orange-bg pt-6 md:min-h-header w-full justify-center md:justify-start">
                 <div className="mr-4">
                     <a href="https://lewys.io/">
                         <Image src="/logo_lewys_png.png" alt="logo Lewys" width="70" height="59"></Image>
@@ -27,19 +27,19 @@ export default function Layout({ children, page }) {
             <main>
                 {children}
             </main>
-            <footer className="min-h-header flex flex-col items-center">
+            <footer className="min-h-footer flex flex-col items-center justify-between w-full">
                 <div className="flex flex-row">
                     <div className="mr-4">
                         <a href="https://lewys.io/">
-                            <Image src="/logo_lewys_png.png" alt="logo Lewys" width="70" height="59"></Image>
+                            <Image src="/logo_lewys_png.png" alt="logo Lewys" width="60" height="49"></Image>
                         </a>
                     </div>
                     <div>
-                        <Image src="/logo_SWIBLU_2x.png" alt="logo Lewys" width="70" height="59"></Image>
+                        <Image src="/logo_SWIBLU_2x.png" alt="logo Lewys" width="60" height="49"></Image>
                     </div>
                 </div>
                 
-                <p>© Lewys.io & Swiblu | 2021</p>
+                <p className="mb-4">© Lewys.io & Swiblu | 2021</p>
 
             </footer>
         </div>

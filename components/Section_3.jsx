@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function ThirdSection(){
     return (
-    <section className="min-h-section95 rounded-tl-section items-center bg-orange-bg pt-12">
-        <h2 className="text-center text-2xl">A propos de <br/> <span className="font-bold text-3xl">nous</span> </h2>
-        <article className="flex flex-row justify-between mx-20 mt-16">
-          <div className="flex flex-col w-1/3 transform scale-95 space-y-4">
-            <div className="flex flex-row items-center">
-              <h3 className="text-xl font-bold mr-6">Lewys</h3>
+    <section className="md:min-h-section95 w-full md:rounded-tl-section items-center bg-orange-bg pt-12">
+        <h2 className="text-center md:text-2xl text-xl">A propos de <br/> <span className="font-bold text-3xl">nous</span> </h2>
+        <article className="flex flex-col md:flex-row justify-between md:mx-20 mx-4 mt-16">
+          <div className="flex flex-col md:w-1/3 w-full transform scale-95 space-y-4">
+            <div className="flex flex-row items-center justify-center md:mb-0 mb-4">
+              <h3 className="md:text-xl text-lg font-bold mr-6">Lewys</h3>
               <Image src="/logo_lewys_png.png" alt="logo Lewys" width="70" height="59"></Image>
             </div>
             
@@ -30,12 +30,12 @@ export default function ThirdSection(){
             </p>
           </div>
 
-          <div className="flex flex-col w-1/3 transform scale-95 justify-center items-center">
-            <Image src="/section_1_2x.png" alt="illustration" width="300" height="250"></Image>
+          <div className="flex flex-col md:w-1/3 w-full transform md:scale-95 scale-75 justify-center items-center md:my-0 my-6">
+            <Image src="/about_2x.png" alt="illustration" width="300" height="250"></Image>
           </div>
 
-          <div className="flex flex-col w-1/3 transform scale-95 space-y-4">
-            <div className="flex flex-row items-center">
+          <div className="flex flex-col md:w-1/3 w-full transform scale-95 space-y-4 mb-12 md:mb-0">
+            <div className="flex flex-row items-center justify-center md:justify-start md:my-0 my-4">
               <h3 className="text-xl font-bold mr-6">Swiblu</h3>
               <Image src="/logo_SWIBLU_2x.png" alt="logo Lewys" width="70" height="59"></Image>
             </div>

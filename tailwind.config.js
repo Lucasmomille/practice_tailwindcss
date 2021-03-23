@@ -7,7 +7,8 @@ module.exports = {
     minHeight: {
       header: '20vh',
       section: '80vh',
-      section95: '95vh'
+      section95: '95vh',
+      footer: '15vh'
     },
     extend: {
       fontFamily: {
