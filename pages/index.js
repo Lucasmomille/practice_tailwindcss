@@ -27,9 +27,13 @@ export default function Home() {
       <ThirdSection></ThirdSection>
       
       <section className="md:min-h-section w-full flex flex-col items-center justify-center" id="section4">
-        <h2 className="md:text-4xl text-xl font-bold my-12">
+      <div className="relative bg-transparent my-12 rounded-3xl flex flex-col items-center text-center md:w-border">
+        <h2 className="md:text-4xl text-xl font-bold bg-transparent z-30">
           Commencez à vendre en ligne !
         </h2>
+        <div className=" w-full bg-orange-bg h-test rounded-2xl -mt-4 z-10"></div>
+      </div>
+       
         <div className="mb-16">
           <Image src="/graphic_2x.png" alt="illustration écran" width="308" height="280"></Image>
         </div>
