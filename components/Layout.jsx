@@ -13,12 +13,14 @@ export default function Layout({ children, page }) {
             </Head>
             <header className="px-10 flex bg-orange-bg pt-6 min-h-header">
                 <div className="mr-4">
-                <a href="https://lewys.io/">
-                    <Image src="/logo_lewys_png.png" alt="logo Lewys" width="70" height="59"></Image>
-                </a>
+                    <a href="https://lewys.io/">
+                        <Image src="/logo_lewys_png.png" alt="logo Lewys" width="70" height="59"></Image>
+                    </a>
                 </div>
                 <div>
-                    <Image src="/logo_SWIBLU_2x.png" alt="logo Lewys" width="70" height="59"></Image>
+                    <a href="https://swiblu.app/">
+                        <Image src="/logo_SWIBLU_2x.png" alt="logo Lewys" width="70" height="59"></Image>
+                    </a>
                 </div>
                 
             </header>
