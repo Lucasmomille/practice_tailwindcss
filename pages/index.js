@@ -12,7 +12,7 @@ export default function Home() {
       <section className="md:min-h-section bg-orange-bg md:px-20 px-4 text-center md:text-left md:rounded-br-section relative z-30 w-full">
         <h1 className="md:text-5xl text-lg font-bold uppercase pt-10">Vous voulez créer <br/> votre boutique en ligne&nbsp;?</h1>
         <p className="my-6 md:w-3/6 w-5/6 inline-block">On est spécialiste là dedans, ça ne vous coûtera pas un bras et en plus on est sympa&nbsp;!</p>
-        <div className="flex flex-col mx-auto md:flex-row w-5/6 justify-between font-bold space-y-6 md:space-y-0 mt-12 md:mt-0">
+        <div className="flex flex-col mx-auto md:flex-row w-5/6 md:w-auto justify-between md:justify-start font-bold space-y-6 md:space-y-0 md:space-y-0 mt-12 md:mt-0">
           <a href="#section4" className="bg-brown-btn py-2 px-8 text-white rounded-xl"> Ça m'interesse !</a>
           <a href="#section2" className="text-brown-btn py-2 px-8">Découvrir les avantages &rsaquo;</a>
         </div>
