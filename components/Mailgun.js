@@ -3,21 +3,28 @@
 const formData = require('form-data');
 const Mailgun = require('mailgun.js');
 const mailgun = new Mailgun(formData);
-const domain = 'sandbox0372ec5f80a344c4a4127b58bb216010.mailgun.org'
+const domain = 'sandboxd3d024db445d4b6e9d4c4b18ed35690e.mailgun.org'
 
 const mg = mailgun.client({
     username: 'api',
-    key: process.env.MAILGUN_API_KEY || '75fe2e533fec92af97ee26a1745d8b9e-b6d086a8-d066dd74',
-    public_key: process.env.MAILGUN_PUBLIC_KEY || 'pubkey-e2983dbcac7a6f28f7ac75b3041f7379'
+    key: process.env.MAILGUN_API_KEY || 'c0a4665e6ff9c74c23ac3fe57f40b42c-1553bd45-f8e01f40',
+    public_key: process.env.MAILGUN_PUBLIC_KEY || 'pubkey-5321ec047b91d3f701009b14545fc83a'
 });
 
-const data = {
-	from: 'Myself <lucas@lewys.io>',
-	to: 'lucas@lewys.io',
-	subject: 'Hello',
-	text: 'Testing some Mailgun awesomness!'
-};
+//const mgTest = mailgun.client({username: 'api', key: process.env.MAILGUN_API_KEY || 'c0a4665e6ff9c74c23ac3fe57f40b42c-1553bd45-f8e01f40', url: 'https://api.eu.mailgun.net'});
 
-mg.messages.create(domain, data)
-  .then(msg => console.log(msg)) // logs response data
-  .catch(err => console.log(err)); // logs any error
+const sendEmail = (firstname, mail) => {
+
+  const data = {
+    from: 'lucas@lewys.io',
+    to: 'lucas@lewys.io',
+    subject: 'Inscription swiblu',
+    text: `${firstname} souhaite s'inscrire avec cette adresse mail ${mail}`
+  };
+  
+  mg.messages.create(domain, data)
+    .then(msg => console.log(msg)) // logs response data
+    .catch(err => console.log(err)); // logs any error
+}
+
+export default sendEmail

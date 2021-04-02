@@ -1,5 +1,7 @@
 import { useForm } from "react-hook-form";
+import sendMail from "./Mailgun.js";
 import {useRef, useState} from "react"
+import sendEmail from "./Mailgun.js";
 
 
 const wait = function (duration = 1000) {
@@ -14,10 +16,13 @@ export default function Form() {
 
     const onSubmit = async data => {
         await wait(2000)
-        console.log(data);
+        let firstname = data["username"];
+        let email = data["useremail"];
+        console.log(firstname);
+        sendEmail(firstname, email)
     }
 
-    console.log(formState);
+   /*  console.log(formState); */
 
     return (
         <form action="submit" className="mb-16 md:p-4 p-2 md:items-center flex flex-col md:flex-row md:w-5/12 w-11/12 md:justify-between border-black border-2 rounded-xl" 
@@ -32,7 +37,11 @@ export default function Form() {
             <div className="flex flex-col">
                 <label htmlFor="email">Email</label>
                 <input type="text" id="email" name="useremail" placeholder="Votre email" className="text-gray-600 border-none p-0 mt-2 focus:ring-2 focus:ring-blue-200" 
-                ref={register({required: true})}/>
+                ref={register({
+                    required: true},
+                    {pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    },
+                )}/>
                 {errors.username && <span className="text-red-500 text-xs">Vous devez renseigner ce champ</span>}
             </div>
         </div>
