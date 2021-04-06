@@ -18,7 +18,7 @@ const sendEmail = (firstname, mail) => {
 
   const data = {
     from: 'lucas@lewys.io',
-    to: 'lucas@lewys.io',
+    to: 'maxime@lewys.io',
     subject: 'Inscription swiblu',
     text: `${firstname} souhaite s'inscrire avec cette adresse mail ${mail}`
   };
