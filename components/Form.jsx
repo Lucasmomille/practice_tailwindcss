@@ -10,6 +10,10 @@ const wait = function (duration = 1000) {
     })
 }
 
+const successMessage = () => {
+    <p className="bg-green-100 text-green-800 rounded-md border-green-800 text-sm p-2">Mail envoyé !</p>
+}
+
 export default function Form() {
     const {register, handleSubmit, formState, errors} = useForm();
 
@@ -19,7 +23,8 @@ export default function Form() {
         let firstname = data["username"];
         let email = data["useremail"];
         console.log(firstname);
-        sendEmail(firstname, email)
+        sendEmail(firstname, email);
+        
     }
 
    /*  console.log(formState); */
@@ -38,11 +43,13 @@ export default function Form() {
                 <label htmlFor="email">Email</label>
                 <input type="text" id="email" name="useremail" placeholder="Votre email" className="text-gray-600 border-none p-0 mt-2 focus:ring-2 focus:ring-blue-200" 
                 ref={register({
-                    required: true},
-                    {pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    },
-                )}/>
-                {errors.username && <span className="text-red-500 text-xs">Vous devez renseigner ce champ</span>}
+                    required: "Email is required",
+                    pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: "Ce mail n'est pas valide"},
+                    
+                })}/>
+                {errors.useremail && <span className="text-red-500 text-xs">Email invalide</span>}
             </div>
         </div>
         <button className="rounded-full w-10 h-10 bg-brown-btn text-white font-bold text-4xl self-center md:self-auto">&rsaquo;</button>
