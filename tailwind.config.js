@@ -14,7 +14,7 @@ module.exports = {
       fontFamily: {
         'comfortaa': ['Comfortaa', 'Helvetica', 'Arial', 'sans-serif']
       },
-      height : {
+      height: {
         test: '20px'
       },
       width: {
@@ -32,7 +32,7 @@ module.exports = {
         section: '400px'
       },
       boxShadow: {
-        lewys: '0px 20px 0px red'
+        custom: '0px 20px 0px red'
       }
     }
   },
